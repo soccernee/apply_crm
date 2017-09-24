@@ -1,0 +1,2 @@
+module SchoolApplicationsHelper
+end

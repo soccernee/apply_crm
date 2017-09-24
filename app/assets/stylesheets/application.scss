@@ -1,0 +1,12 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+.navbar-light {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+
+.application_table {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

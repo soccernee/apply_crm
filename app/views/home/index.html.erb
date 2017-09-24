@@ -1,0 +1,44 @@
+<h1>Apply!</h1>
+<h4>Welcome to your home page</h4>
+
+<br>
+<br>
+
+Here are the applications you have acccess to:
+<div class="application_table">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Year</th>
+        <th># Schools</th>
+        <th>Privilege</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @application_cycle_objects.each do |app| %>
+        <tr>
+          <td><%= app[:name] %></td>
+          <td><%= app[:year] %></td>
+          <td><%= app[:school_applications_count] %></td>
+          <td><%= app[:privilege] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+Create a New Applications
+</div>
+<%= form_for ApplicationCycle.new do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+  <%= f.submit nil, class: 'btn btn-secondary' %>
+<% end %>
