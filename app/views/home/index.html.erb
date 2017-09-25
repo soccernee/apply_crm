@@ -21,7 +21,7 @@ Here are the applications you have acccess to:
           <td><%= app[:name] %></td>
           <td><%= app[:year] %></td>
           <td><%= app[:school_applications_count] %></td>
-          <td><%= app[:privilege] %></td>
+          <td><%= ApplicationCyclePrivilege.privilege_to_s(app[:privilege]) %></td>
         </tr>
       <% end %>
     </tbody>

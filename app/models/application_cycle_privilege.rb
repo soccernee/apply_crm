@@ -10,4 +10,11 @@ class ApplicationCyclePrivilege < ApplicationRecord
 
   PRIVILEGE_ENUMS = PRIVILEGES.values
   PRIVILEGE_STRINGS = PRIVILEGES.keys
+
+  PRIVILEGE_STRINGS = PRIVILEGES.invert
+
+  def self.privilege_to_s(privilege)
+    PRIVILEGE_STRINGS[privilege].to_s
+  end
+
 end
