@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  resources :application_cycles
-  resources :school_applications
+
   devise_for :users
+
+  resources :application_cycles do
+    resources :school_applications
+  end
 
   get 'home/index'
   root "home#index"
-
 end

@@ -1,0 +1,39 @@
+Board: <%= @application_cycle.name %>
+
+<br>
+<br>
+
+Schools:
+<div class="application_table">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Major</th>
+        <th>Application Deadline</th>
+        <th>Application Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @application_cycle.school_applications.each do |school| %>
+        <tr>
+          <td><%= school.name  %></td>
+          <td><%= school.location %></td>
+          <td><%= school.major %></td>
+          <td><%= school.deadline_at %></td>
+          <td><%= school.status %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+<div>
+Add a New School
+</div>
+<%= form_for [@application_cycle, SchoolApplication.new] do |f| %>
+
+ <%= f.submit nil, class: 'btn btn-secondary' %>
+<% end %>

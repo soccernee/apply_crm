@@ -1,5 +1,9 @@
 class ApplicationCyclesController < ApplicationController
 
+  def show
+    @application_cycle = ApplicationCycle.includes(:school_applications).find(params[:id])
+  end
+
   def create
     application_cycle = ApplicationCycle.new(application_params)
     privilege = ApplicationCyclePrivilege.new(
