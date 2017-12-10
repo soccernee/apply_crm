@@ -6,6 +6,23 @@ git_source(:github) do |repo_name|
 end
 
 
+#
+# APPLICATION SPECIFIC
+#
+
+# Country-Code Validation
+gem 'countries'
+
+# PG Search for Typeahead
+gem 'pg_search'
+
+# Devise for Authentication
+gem 'devise'
+
+#
+# RAILS DEFAULTS
+#
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
@@ -33,8 +50,7 @@ gem 'bootstrap', '~> 4.0.0.beta'
 # Add JQuery-Rails
 gem 'jquery-rails'
 
-# Devise for Authentication
-gem 'devise'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
