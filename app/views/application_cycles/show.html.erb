@@ -16,13 +16,13 @@ Schools:
       </tr>
     </thead>
     <tbody>
-      <% @application_cycle.school_applications.each do |school| %>
+      <% @application_cycle.school_applications.each do |school_app| %>
         <tr>
-          <td><%= school.name  %></td>
-          <td><%= school.location %></td>
-          <td><%= school.major %></td>
-          <td><%= school.deadline_at %></td>
-          <td><%= school.status %></td>
+          <td><%= school_app.school.name  %></td>
+          <td><%= school_app.school.location %></td>
+          <td><%= school_app.major %></td>
+          <td><%= school_app.school.deadline_at %></td>
+          <td><%= school_app.status %></td>
         </tr>
       <% end %>
     </tbody>
@@ -34,6 +34,7 @@ Schools:
 Add a New School
 </div>
 <%= form_for [@application_cycle, SchoolApplication.new] do |f| %>
-
- <%= f.submit nil, class: 'btn btn-secondary' %>
+  <%= f.label :name %>
+  <%= f.text_field :school_id, list: 'school_typeahead'%>
+ <%= f.submit "Add School", class: 'btn btn-secondary' %>
 <% end %>

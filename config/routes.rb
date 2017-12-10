@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :school_applications
   end
 
+  get 'schools/search' => 'school#search'
+
   get 'home/index'
   root "home#index"
 end

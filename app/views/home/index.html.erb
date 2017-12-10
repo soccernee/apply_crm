@@ -33,12 +33,12 @@ Here are the boards you have acccess to:
 <br>
 
 <div>
-Create a New Applications
+Create a New Board
 </div>
 <%= form_for ApplicationCycle.new do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :year %>
   <%= f.text_field :year %>
-  <%= f.submit nil, class: 'btn btn-secondary' %>
+  <%= f.submit "Create New Board", class: 'btn btn-secondary' %>
 <% end %>
