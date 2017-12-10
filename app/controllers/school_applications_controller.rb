@@ -11,6 +11,6 @@ class SchoolApplicationsController < ApplicationController
   private
 
   def application_params
-    params.require(:school_applications).permit(:name, :major, :application_cycle_id)
+    params.require(:school_application).permit(:application_cycle_id, :school_id)
   end
 end

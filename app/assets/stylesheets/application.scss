@@ -1,4 +1,10 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
+
+/*
+ *= require_self
+ *= require select2
+ */
+
 @import "bootstrap";
 
 .navbar-light {

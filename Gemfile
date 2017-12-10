@@ -19,6 +19,9 @@ gem 'pg_search'
 # Devise for Authentication
 gem 'devise'
 
+# Javascript for Typeahead Search
+gem "select2-rails"
+
 #
 # RAILS DEFAULTS
 #

@@ -35,6 +35,6 @@ Add a New School
 </div>
 <%= form_for [@application_cycle, SchoolApplication.new] do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :school_id, list: 'school_typeahead'%>
- <%= f.submit "Add School", class: 'btn btn-secondary' %>
+  <%= f.text_field :school_id, class: 'select2 ajax', data: { source: schools_search_path } %>
+  <%= f.submit "Add School", class: 'btn btn-secondary' %>
 <% end %>
